@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ### Primary
+
+- Dark cyan: hsl(158, 36%, 37%)
+- Cream: hsl(30, 38%, 92%)
+
+### Neutral
+
+- Very dark blue: hsl(212, 21%, 14%)
+- Dark grayish blue: hsl(228, 12%, 48%)
+- White: hsl(0, 0%, 100%) */
+body{
+    font-size: 14px;
+    background-color:  hsl(30, 38%, 92%);
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 0.1px);
+    margin: 0 1.5rem;
+}
+.container{
+    max-width: 600px;
+}
+h1,.price{
+    font-family: 'Fraunces', serif;
+    color: hsl(158, 36%, 37%);
+}
+h1{
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    margin-left: 8px;
+}
+
+h2{
+    font-size: 0.8rem;
+    margin-top: 8px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: hsl(228, 12%, 48%);
+    margin-bottom: 20px;
+}
+.container article:first-child img{
+    border-radius: 1rem 1rem 0 0;
+}
+.container article:last-child{
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    margin-top: -1rem;
+}
+img{
+    max-width: 100%;
+}
+button{
+    display: block;
+    margin-top: 20px;
+    padding: 1rem 2rem;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: hsl(158, 36%, 37%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+}
+button img{
+    margin-right: 12px;
+}
+button:hover{
+    background-color: hsl(158, 43%, 18%);
+}
+p{
+    color: hsl(228, 12%, 48%);
+    line-height: 1.8;
+    margin-bottom: 20px;
+} 
+.price{
+    font-size: 2rem;
+    margin-right: 15px;
+}
+.allPrice{
+    display: flex;
+    align-items: center;
+}
+.allPrice span:last-child{
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+}
+@media (min-width: 640px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .container article:first-child img{
+        max-height: 100vh;
+        border-radius: 10px 0px 0px 10px;
+    }
+    .container article:last-child{
+        border-radius: 0 10px 10px 0;
+        margin-top: 0;
+        padding: 30px 30px 0px 30px;
+    }
+    button{
+        margin-top: 10px;
+    }
+    h2{
+        margin-top: -6px;
+    }
+}
+
+.attribution{
+    margin-top: 20px;
+}
+.attribution a{
+    text-decoration: none;
+}
